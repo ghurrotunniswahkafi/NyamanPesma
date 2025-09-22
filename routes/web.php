@@ -16,10 +16,6 @@ Route::get('/facility/detail-asrama', function () {
     return view('facility.detail-asrama');
 });
 
-Route::get('/admin', function () {
-    return view('admin'); 
-});
-
 use App\Http\Controllers\AsramaController;
 
 /* Route::get('/asrama', [AsramaController::class, 'index']);
