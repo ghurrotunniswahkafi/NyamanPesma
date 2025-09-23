@@ -1,0 +1,560 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+}
+
+body {
+    background-color: white;
+    margin: 0;
+}
+
+nav {
+    background-color: #2f3185;
+    display: flex;
+    margin: 0px;
+    justify-content: space-between;
+    padding: 7px 30px;
+    border-bottom: 3px solid #ffb800;
+}
+
+nav div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+nav div img {
+    width: 100px;
+}
+
+nav div h2 {
+    font-family: poppins;
+    color: white;
+    font-size: 18px;
+}
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-family: poppins;
+    color: white;
+    font-weight: 600;
+    padding: 8px 0;
+    transition: all;
+    transition-duration: 300ms;
+    border-bottom: 1px solid #ffb70000;
+}
+
+nav ul li a:hover {
+    color: #ffb800;
+    border-bottom: solid 3px #ffb800;
+}
+
+.more {
+    background-image: url(../img/background.png);
+    height: 40vh;
+    text-align: center;
+}
+
+.facility-wrapper,
+.layanan-wrapper,
+.information-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.layanan,
+.information {
+  flex-direction: column;
+  justify-content: space-between;
+  width: 125px;
+  min-height: 200px;
+}
+
+.layanan-wrapper {
+    gap: 10%;
+}
+
+.information-wrapper {
+    gap: 9.3%;
+}
+.facility-wrapper {
+    gap: 30px;
+}
+.facility-section h1 {
+    text-align: center;
+}
+
+.facility h3 {
+    font-size: 15px;
+}
+.more h1,
+.facility-section h1 {
+    padding-top: 25px;
+    font-family: Poppins, sans-serif;
+    position: relative;
+    color: #2f3185;
+}
+
+.more h1::after,
+.facility-section h1::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -6px;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: #ffb800;
+    border-radius: 2px;
+}
+
+
+.more h3 {
+    font-family: poppins;
+    color: #2f3185;
+}
+
+.more i {
+    padding-top: 25px;
+    padding-bottom: 20px;
+    color: #2f3185;
+    font-size: 50px;
+}
+
+.more i:hover {
+    color: #ffb800;
+}
+
+.more a,
+.facility-section .facility a {
+    font-family: poppins;
+    color: #2f3185;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.more a:hover,
+.facility a:hover {
+    color: #ffb800;
+}
+
+.facility a {
+    padding: 20px;
+}
+
+.asrama-putra-section {
+    background-color: white;
+    min-height: 50%;
+}
+
+.asrama-putra-section .section-content {
+    display: flex;
+    align-items: center;
+    color: #2f3185;
+    justify-content: space-between;
+    gap: 40px;
+    margin-left: 90px;
+}
+.asrama-putra-section .asrama-putra-details {
+    max-width: 50%;
+    align-items: center;
+}
+
+.asrama-putra-section .asrama-putra-details .title {
+    display: inline-block;
+    border-bottom: 3px solid #ffb800;
+    padding-bottom: 5px;
+}
+
+.asrama-putra-section .asrama-putra-details .subtitle {
+    margin-top: 8px;
+    font-size: 1.12rem;
+    font-weight: 400;
+    text-align: justify;
+}
+
+.asrama-putra-section .asrama-putra-details .description {
+    margin-left: 90px;
+    font-size: 1.12rem;
+    max-width: 70%;
+    margin: 24px 0 48px;
+}
+
+.asrama-putra-section .asrama-putra-details .buttons {
+    display: inline-block;
+    padding: 6px 16px;
+    color: #ffb800;
+    background-color: #2f3185;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+.asrama-putra-section .asrama-putra-details .buttons a {
+    text-decoration: none;
+    color: inherit;
+    background: #2f3185;
+}
+.asrama-putra-section .asrama-putra-details .buttons i {
+    color: #ffb800;
+    font-size: 16px;
+    padding: 3px;
+}
+.asrama-putra-section .asrama-putra-details .buttons:hover i,
+.asrama-putra-section .asrama-putra-details .buttons:hover a,
+.asrama-putra-section .asrama-putra-details .buttons:hover {
+    color: #2f3185;
+    border-color: #ffb800;
+    background: #ffb800;
+}
+
+.asrama-putra-section .asrama-putra-image-wrapper {
+    margin-top: 8px;
+    margin-right: 100px;
+    position: relative;
+    width: 600px;
+    height: 430px;
+    overflow: hidden;
+}
+
+.asrama-putra-section .asrama-putra-image-wrapper .asrama-putra-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.asrama-putra-section .asrama-putra-image-wrapper .asrama-putra-image.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+.asrama-putra-section .asrama-putra-image-wrapper::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+body.popup-active {
+    overflow: hidden;
+}
+.pop-up-asrama-putra {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    overflow-y: auto;
+    z-index: 9999;
+}
+.pop-up-asrama-putra-content {
+    width: 90%;
+    max-width: 800px;
+    background-color: white;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    max-height: 90vh; /* biar tidak keluar layar */
+    overflow-y: auto;
+}
+
+.pop-up-asrama-putra-image {
+    display: flex;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.pop-up-asrama-putra-image img {
+    display: block;
+    width: 33.3333%;
+    object-fit: cover;
+}
+
+.pop-up-asrama-putra-header {
+    text-align: center;
+    color: #2f3185;
+    margin-bottom: 36px;
+}
+
+.pop-up-asrama-putra-header h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.pop-up-asrama-putra-header h2 {
+    font-size: 20px;
+}
+
+.pop-up-asrama-putra-details {
+    padding: 0 36px;
+    line-height: 1.4;
+}
+
+.pop-up-asrama-putra-details p:not(:last-child) {
+    margin-bottom: 16px;
+}
+
+.pop-up-button {
+    display: block;
+    text-align: center;
+    background-color: #ffb800;
+    margin: 20px auto 0;
+    padding: 10px 20px;
+    border-radius: 6px;
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+    width: fit-content;
+}
+
+.pop-up-back-button {
+    display: inline-block;
+    margin-bottom: 15px;
+    padding: 8px 16px;
+    background-color: #2f3185;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.pop-up-back-button:hover {
+    background-color: #1e2060;
+}
+
+#pop-up-asrama-putra:target {
+    opacity: 1;
+    visibility: visible;
+}
+
+#pop-up-asrama-putra:target .pop-up-asrama-putra-content {
+    opacity: 1;
+}
+
+/* ASRAMA PUTRI */
+.asrama-putri-section {
+    background-color: white;
+    min-height: 50%;
+}
+
+.asrama-putri-section .section-content {
+    display: flex;
+    align-items: center;
+    color: #2f3185;
+    justify-content: space-between;
+    gap: 40px;
+    margin-left: 90px;
+}
+.asrama-putri-section .asrama-putri-details {
+    max-width: 50%;
+    align-items: center;
+}
+
+.asrama-putri-section .asrama-putri-details .title {
+    display: inline-block;
+    border-bottom: 3px solid #ffb800;
+    padding-bottom: 5px;
+}
+
+.asrama-putri-section .asrama-putri-details .subtitle {
+    margin-top: 8px;
+    font-size: 1.12rem;
+    font-weight: 400;
+    text-align: justify;
+}
+
+.asrama-putri-section .asrama-putri-details .description {
+    margin-left: 90px;
+    font-size: 1.12rem;
+    max-width: 70%;
+    margin: 24px 0 48px;
+}
+
+.asrama-putri-section .asrama-putri-details .buttons {
+    display: inline-block;
+    padding: 6px 16px;
+    color: #ffb800;
+    background-color: #2f3185;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+.asrama-putri-section .asrama-putri-details .buttons a {
+    text-decoration: none;
+    color: inherit;
+    background: #2f3185;
+}
+.asrama-putri-section .asrama-putri-details .buttons i {
+    color: #ffb800;
+    font-size: 16px;
+    padding: 3px;
+}
+.asrama-putri-section .asrama-putri-details .buttons:hover i,
+.asrama-putri-section .asrama-putri-details .buttons:hover a,
+.asrama-putri-section .asrama-putri-details .buttons:hover {
+    color: #2f3185;
+    border-color: #ffb800;
+    background: #ffb800;
+}
+
+.asrama-putri-section .asrama-putri-image-wrapper {
+    margin-top: 8px;
+    margin-right: 100px;
+    position: relative;
+    width: 600px;
+    height: 430px;
+    overflow: hidden;
+}
+
+.asrama-putri-section .asrama-putri-image-wrapper .asrama-putri-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.asrama-putri-section .asrama-putri-image-wrapper .asrama-putri-image.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+.asrama-putri-section .asrama-putri-image-wrapper::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.pop-up-asrama-putri {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    overflow-y: auto;
+    z-index: 9999;
+}
+.pop-up-asrama-putri-content {
+    width: 90%;
+    max-width: 800px;
+    background-color: white;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.pop-up-asrama-putri-image {
+    display: flex;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.pop-up-asrama-putri-image img {
+    display: block;
+    width: 33.3333%;
+    object-fit: cover;
+}
+
+.pop-up-asrama-putri-header {
+    text-align: center;
+    color: #2f3185;
+    margin-bottom: 36px;
+}
+
+.pop-up-asrama-putri-header h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.pop-up-asrama-putri-header h2 {
+    font-size: 20px;
+}
+
+.pop-up-asrama-putri-details {
+    padding: 0 36px;
+    line-height: 1.4;
+}
+
+.pop-up-asrama-putri-details p:not(:last-child) {
+    margin-bottom: 16px;
+}
+
+.pop-up-button {
+    display: block;
+    text-align: center;
+    background-color: #ffb800;
+    margin: 20px auto 0;
+    padding: 10px 20px;
+    border-radius: 6px;
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+    width: fit-content;
+}
+
+.pop-up-back-button {
+    display: inline-block;
+    margin-bottom: 15px;
+    padding: 8px 16px;
+    background-color: #2f3185;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.pop-up-back-button:hover {
+    background-color: #1e2060;
+}
+
+#pop-up-asrama-putri:target {
+    opacity: 1;
+    visibility: visible;
+}
+
+#pop-up-asrama-putri:target .pop-up-asrama-putri-content {
+    opacity: 1;
+}
